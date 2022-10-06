@@ -25,7 +25,7 @@ def _create_reg_object(selection,reg_df,scale, color,n_terms,property):
         atom1 = atom_index[0]
         atom2 = atom_index[1]
         cmd.select(name = f"temp_sele",selection = f'i. {atom1} i. {atom2}', domain=selection)
-        cmd.distance( obj_name, selection1 = f"i. {atom1} in {selection}",selection2 = f" i. {atom2} in {selection}")
+        cmd.distance( obj_name, selection1 = f"{selection} like idx. {atom1} ",selection2 = f" {selection} like idx. {atom2}")
         cmd.hide("labels",obj_name)
         cmd.color(color=color,selection=obj_name)
         cmd.set("dash_gap",str((1/scale)/norm_reg[count]),obj_name)
