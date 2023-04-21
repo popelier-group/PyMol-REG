@@ -32,3 +32,8 @@ Otherwise, simply type
 # To do
 
 - Add a QTWidget in PyMol GUI
+
+# License
+
+The MIT License makes this plugin available for everyone. You are more than welcome to help with the development of this repository.
+Please cite this github page if you use the plugin for your studies/research.
