@@ -1,0 +1,10 @@
+cff-version: 1.0
+message: "If you use the PyMol-REG plugin, please cite it as below."
+authors:
+- family-names: "Falcioni"
+  given-names: "Fabio"
+  orcid: "https://orcid.org/0000-0003-4041-6695"
+title: "PyMol-REG"
+version: 0.1
+date-released: 2023-04-21
+url: "https://github.com/popelier-group/PyMol-REG"
