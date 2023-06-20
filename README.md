@@ -18,6 +18,8 @@ Otherwise, simply type
 - `run path/to/pymol_reg.py`
   to load it in the current PyMol session.
 
+Note that PyMol sometimes when installed has its own virtual environment, thus the above-listed dependencies need to be installed 
+in that environment for the plugin to work.
 ## Variables
 
 1. **selection** : object/geometry of the reaction analyzed with the REG methodology uploaded in PyMol.
