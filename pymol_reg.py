@@ -1,7 +1,8 @@
-import pandas as pd
-from pymol import cmd
-import numpy as np
+import glob
 import re
+from pymol import cmd
+import pandas as pd
+import numpy as np
 
 
 def _create_reg_label(selection, object_name, label, color):
@@ -57,7 +58,7 @@ def _create_reg_object(selection, reg_df, scale, color, n_terms, property):
 
 def pymol_reg(
     selection="all",
-    reg_file=None,
+    reg_file="REG.xlsx",
     property="Einter",
     segment="1",
     n_terms=3,
@@ -75,3 +76,13 @@ def pymol_reg(
 
 
 cmd.extend("pymol_reg", pymol_reg)
+
+# tab-completion of arguments
+names_filenames_sc = )
+cmd.auto_arg[0]["pymol_reg"] = [cmd.object_sc, "selection=", ", "]
+cmd.auto_arg[1]["pymol_reg"] = [lambda: cmd.Shortcut(["path/to/reg.xlsx"]), "reg_file=", ", "]
+cmd.auto_arg[2]["pymol_reg"] = [
+    lambda: cmd.Shortcut(["Einter", "Vxc", "Vcl"]),
+    "property=",
+    "",
+]
