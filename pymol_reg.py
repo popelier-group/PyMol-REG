@@ -78,9 +78,12 @@ def pymol_reg(
 cmd.extend("pymol_reg", pymol_reg)
 
 # tab-completion of arguments
-names_filenames_sc = )
 cmd.auto_arg[0]["pymol_reg"] = [cmd.object_sc, "selection=", ", "]
-cmd.auto_arg[1]["pymol_reg"] = [lambda: cmd.Shortcut(["path/to/reg.xlsx"]), "reg_file=", ", "]
+cmd.auto_arg[1]["pymol_reg"] = [
+    lambda: cmd.Shortcut(["path/to/reg.xlsx"]),
+    "reg_file=",
+    ", ",
+]
 cmd.auto_arg[2]["pymol_reg"] = [
     lambda: cmd.Shortcut(["Einter", "Vxc", "Vcl"]),
     "property=",
